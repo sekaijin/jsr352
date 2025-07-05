@@ -56,6 +56,11 @@ public final class SplitBuilder {
         return new SplitBuilder(id);
     }
 
+    public SplitBuilder add (FlowBuilder builder) {
+        flow(builder.build());
+        return this;
+    }
+
     /**
      * Sets the {@code next} attribute value for the split.
      *

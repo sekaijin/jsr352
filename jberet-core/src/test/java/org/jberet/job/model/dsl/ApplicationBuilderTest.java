@@ -1,5 +1,6 @@
 package org.jberet.job.model.dsl;
 
+import org.jberet.job.model.Job;
 import org.junit.jupiter.api.Test;
 
 public class ApplicationBuilderTest {
@@ -13,8 +14,8 @@ public class ApplicationBuilderTest {
     public static class MyApp extends ApplicationBuilder {
 
         @Override
-        public void configure() {
-            job("test")
+        public Job configure() {
+            return job("test")
             .add(step("setp1")
                 .batchlet("myBatchlet"))
             .add(step("step2")
@@ -22,7 +23,7 @@ public class ApplicationBuilderTest {
                 .processor("myProcessor")
                 .writer("mockWriter"))
             .add(flow("flow1")
-                .step(step("step1").build()))
+                .add(step("step1")))
             .build();
         }        
     }

@@ -54,6 +54,21 @@ public final class FlowBuilder {
         return new FlowBuilder(id);
     }
 
+    public FlowBuilder add (StepBuilder builder) {
+        step(builder.build());
+        return this;
+    }
+
+    public FlowBuilder add (FlowBuilder builder) {
+        flow(builder.build());
+        return this;
+    }
+
+    public FlowBuilder add (SplitBuilder builder) {
+        split(builder.build());
+        return this;
+    }
+
     /**
      * Sets the {@code next} attribute value for the flow.
      *

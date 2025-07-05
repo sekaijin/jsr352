@@ -1,6 +1,7 @@
 package org.jberet.job.model.dsl;
 
 import org.jberet.job.model.FlowBuilder;
+import org.jberet.job.model.Job;
 import org.jberet.job.model.JobBuilder;
 import org.jberet.job.model.SplitBuilder;
 import org.jberet.job.model.StepBuilder;
@@ -11,7 +12,7 @@ public abstract class ApplicationBuilder {
         super();
     }
 
-    public abstract void configure();
+    public abstract Job configure();
 
 
     public JobBuilder job(String id) {
