@@ -50,6 +50,10 @@ public final class FlowBuilder {
         this.id = id;
     }
 
+    public static FlowBuilder flow(String id) {
+        return new FlowBuilder(id);
+    }
+
     /**
      * Sets the {@code next} attribute value for the flow.
      *

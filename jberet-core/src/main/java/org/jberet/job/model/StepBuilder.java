@@ -107,6 +107,10 @@ public final class StepBuilder extends AbstractPropertiesBuilder<StepBuilder> {
         this.id = id;
     }
 
+    public static StepBuilder step(String id) {
+        return new StepBuilder(id);
+    }
+
     /**
      * Sets the {@code start-limit} attribute value for the step.
      *

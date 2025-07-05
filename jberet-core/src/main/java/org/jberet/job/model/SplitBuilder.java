@@ -52,6 +52,10 @@ public final class SplitBuilder {
         this.id = id;
     }
 
+    public static SplitBuilder split(String id) {
+        return new SplitBuilder(id);
+    }
+
     /**
      * Sets the {@code next} attribute value for the split.
      *

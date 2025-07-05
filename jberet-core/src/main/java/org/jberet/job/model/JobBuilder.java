@@ -78,6 +78,25 @@ public final class JobBuilder extends AbstractPropertiesBuilder<JobBuilder> {
         this.id = id;
     }
 
+    public static JobBuilder job(String id) {
+        return new JobBuilder(id);
+    }
+
+    public JobBuilder add (StepBuilder builder) {
+        step(builder.build());
+        return this;
+    }
+
+    public JobBuilder add (FlowBuilder builder) {
+        flow(builder.build());
+        return this;
+    }
+
+    public JobBuilder add (SplitBuilder builder) {
+        split(builder.build());
+        return this;
+    }
+
     /**
      * Sets the {@code restartable} attribute value on the job. This method may be invoked with 0 or 1 boolean parameter.
      * {@code restartable()} is equivalent to {@code restartable(true)}.
