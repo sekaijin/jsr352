@@ -97,6 +97,11 @@ public final class JobBuilder extends AbstractPropertiesBuilder<JobBuilder> {
         return this;
     }
 
+    public JobBuilder add (DecisionBuilder builder) {
+        decision(builder.build());
+        return this;
+    }
+
     /**
      * Sets the {@code restartable} attribute value on the job. This method may be invoked with 0 or 1 boolean parameter.
      * {@code restartable()} is equivalent to {@code restartable(true)}.

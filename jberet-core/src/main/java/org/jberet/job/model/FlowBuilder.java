@@ -69,6 +69,11 @@ public final class FlowBuilder {
         return this;
     }
 
+    public FlowBuilder add (DecisionBuilder builder) {
+        decision(builder.build());
+        return this;
+    }
+
     /**
      * Sets the {@code next} attribute value for the flow.
      *

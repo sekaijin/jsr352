@@ -52,6 +52,10 @@ public final class DecisionBuilder extends AbstractPropertiesBuilder<DecisionBui
         this.ref = deciderRef;
     }
 
+    public static DecisionBuilder decision(String id, String deciderRef){
+       return new DecisionBuilder(id, deciderRef);
+    }
+
     /**
      * Sets {@code end} transition condition for the decision. This method does NOT return the current {@code DecisionBuilder}
      * instance; instead, it returns an instance of {@link org.jberet.job.model.Transition.End}, which can be further
